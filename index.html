@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bio</title>
+<link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/185990190?v=4">
+<style>
+body {
+  font-family: Consolas, monospace;
+  background: #0f0f0f;
+  color: #00ff9c;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 25px;
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0,255,156,0.2);
+  border: 1px solid rgba(0,255,156,0.2);
+}
+.profile {
+  text-align: center;
+}
+.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00ff9c;
+  box-shadow: 0 0 10px #00ff9c;
+}
+h1 {
+  margin: 15px 0 5px;
+  text-shadow: 0 0 8px #00ff9c;
+}
+p {
+  line-height: 1.6;
+}
+a {
+  color: #00ff9c;
+  text-decoration: underline;
+}
+a:hover {
+  text-shadow: 0 0 5px #00ff9c;
+}
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background: #00ff9c;
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="profile">
+    <img src="https://avatars.githubusercontent.com/u/185990190?v=4" alt="Profile Picture">
+    <h1>Sebastian</h1>
+    <p id="typing"></p><span class="cursor"></span>
+  </div>
+
+  <hr>
+
+  <h2>> About_Me</h2>
+  <p>
+    I code using HTML and CSS and enjoy building clean, modern websites. I like designing layouts, styling pages, and making everything look smooth and professional.
+  </p>
+
+  <h2>> Contact</h2>
+  <p>Email: <a href="mailto:mrcode10s@gmail.com">mrcode10s@gmail.com</a></p>
+  <p>GitHub : <a href="https://github.com/SebastianE122782" target="_blank" style="text-decoration: underline;">github.com/SebastianE122782</a></p>
+</div>
+
+<script>
+const text = "I code in HTML & CSS... building clean websites.";
+let i = 0;
+function type() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, 40);
+  }
+}
+type();
+</script>
+
+</body>
+</html>
